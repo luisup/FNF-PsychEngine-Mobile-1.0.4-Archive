@@ -189,6 +189,13 @@ class Main extends Sprite
 		#if mobile
 		#if android FlxG.android.preventDefaultKeys = [BACK]; #end
 		LimeSystem.allowScreenTimeout = ClientPrefs.data.screensaver;
+		
+		// OBLIGAR A IPADOS A PASAR TODAS LAS TECLAS DEL MAGIC KEYBOARD AL MOTOR
+		#if ios
+		if (Application.current.window != null) {
+			Application.current.window.textInputable = true;
+		}
+		#end
 		#end
 
 		Application.current.window.vsync = ClientPrefs.data.vsync;
