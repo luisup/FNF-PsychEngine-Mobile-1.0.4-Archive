@@ -193,7 +193,7 @@ class Main extends Sprite
 		// OBLIGAR A IPADOS A PASAR TODAS LAS TECLAS DEL MAGIC KEYBOARD AL MOTOR
 		#if ios
 		if (Application.current.window != null) {
-			Application.current.window.textInputable = true;
+			Application.current.window.textInputEnabled = true;
 		}
 		#end
 		#end
